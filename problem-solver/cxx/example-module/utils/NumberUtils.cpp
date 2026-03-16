@@ -8,10 +8,12 @@
 
 #include "keynodes/Keynodes.hpp"
 
+#include <algorithm>
+
 namespace utils
 {
 
-bool NumberUtils::isPositiveInteger(std::string const & str)
+bool NumberUtils::IsPositiveInteger(std::string const & str)
 {
   return !str.empty()
          && std::find_if(
@@ -24,7 +26,7 @@ bool NumberUtils::isPositiveInteger(std::string const & str)
                 == str.end();
 }
 
-ScAddr NumberUtils::resolveNumber(ScMemoryContext & context, unsigned const value)
+ScAddr NumberUtils::ResolveNumber(ScMemoryContext & context, unsigned const value)
 {
   std::string valueStr = std::to_string(value);
 

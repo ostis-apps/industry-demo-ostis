@@ -9,18 +9,19 @@
 
 #include <sc-agents-common/utils/IteratorUtils.hpp>
 
-#include "agents/PathFindingAgent.hpp"
+#include "agents/PathSearchAgent.hpp"
+#include "keynodes/Keynodes.hpp"
 #include "utils/NumberUtils.hpp"
 
 #include "utils/TestUtils.hpp"
 
-namespace pathFindingAgentTest
+namespace PathSearchAgentTest
 {
 ScsLoader loader;
 std::string const EXAMPLE_MODULE_TEST_FILES_DIR_PATH = "../test-structures/";
 int const WAIT_TIME = 5000;
 
-using PathFindingAgentTest = ScMemoryTest;
+using PathSearchAgentTest = ScMemoryTest;
 
 void checkResultAndGetPathWithLength(
     ScMemoryContext & context,
@@ -61,12 +62,12 @@ void checkResultAndGetPathWithLength(
       });
   ASSERT_EQ(amountOfResults, 1);
 
-  ASSERT_EQ(utils::TestUtils::getAmountOfOutgoingMembershipArcs(context, result), expectedAmountOfElements);
+  ASSERT_EQ(utils::TestUtils::GetAmountOfOutgoingMembershipArcs(context, result), expectedAmountOfElements);
 
   std::string lengthNumberIdtf;
-  utils::TestUtils::getSoleIdtf(context, lengthNumberAddr, lengthNumberIdtf);
+  utils::TestUtils::GetSoleIdtf(context, lengthNumberAddr, lengthNumberIdtf);
 
-  ASSERT_TRUE(utils::NumberUtils::isPositiveInteger(lengthNumberIdtf));
+  ASSERT_TRUE(utils::NumberUtils::IsPositiveInteger(lengthNumberIdtf));
 
   length = atoi(lengthNumberIdtf.c_str());
 }
@@ -98,10 +99,10 @@ void checkPathStructure(
       });
   ASSERT_EQ(amountOfResults, 1);
 
-  ASSERT_EQ(utils::TestUtils::getAmountOfOutgoingMembershipArcs(context, pathAddr), expectedAmountOfElements);
+  ASSERT_EQ(utils::TestUtils::GetAmountOfOutgoingMembershipArcs(context, pathAddr), expectedAmountOfElements);
 }
 
-void successfulPathfindingTestBody(
+void successfulPathSearchTestBody(
     ScAgentContext & context,
     std::string const & fileWithGraphName,
     std::string const & expectedPathTemplateIdtf,
@@ -135,36 +136,36 @@ void successfulPathfindingTestBody(
 
   // unlike the roadWeightTemplate above, this check template doesn't have duplicating membership arcs
   unsigned expectedAmountOfElementsInPath =
-      utils::TestUtils::getAmountOfOutgoingMembershipArcs(context, pathCheckTemplateAddr);
+      utils::TestUtils::GetAmountOfOutgoingMembershipArcs(context, pathCheckTemplateAddr);
   checkPathStructure(context, pathAddr, pathCheckTemplateAddr, expectedAmountOfElementsInPath);
 }
 
 void initialize(ScAgentContext & context)
 {
-  context.SubscribeAgent<PathFindingAgent>();
+  context.SubscribeAgent<PathSearchAgent>();
 }
 
 void shutdown(ScAgentContext & context)
 {
-  context.UnsubscribeAgent<PathFindingAgent>();
+  context.UnsubscribeAgent<PathSearchAgent>();
 }
 
-TEST_F(PathFindingAgentTest, shortestPathByStepsIsShortestBySteps)
+TEST_F(PathSearchAgentTest, shortestPathByStepsIsShortestBySteps)
 {
   ScAgentContext & context = *m_ctx;
 
   initialize(context);
-  successfulPathfindingTestBody(context, "graphWithTwoStepsShortestPath.scs", "two_step_path_template", 450);
+  successfulPathSearchTestBody(context, "graphWithTwoStepsShortestPath.scs", "two_step_path_template", 450);
   shutdown(context);
 }
 
-TEST_F(PathFindingAgentTest, shortestPathByStepsIsNotShortestBySteps)
+TEST_F(PathSearchAgentTest, shortestPathByStepsIsNotShortestBySteps)
 {
   ScAgentContext & context = *m_ctx;
 
   initialize(context);
-  successfulPathfindingTestBody(context, "graphWithThreeStepsShortestPath.scs", "three_step_path_template", 250);
+  successfulPathSearchTestBody(context, "graphWithThreeStepsShortestPath.scs", "three_step_path_template", 250);
   shutdown(context);
 }
 
-}  // namespace pathFindingAgentTest
+}  // namespace PathSearchAgentTest

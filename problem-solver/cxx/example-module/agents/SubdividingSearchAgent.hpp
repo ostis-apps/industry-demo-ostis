@@ -8,12 +8,12 @@
 
 #include <sc-memory/sc_agent.hpp>
 
-#include "keynodes/Keynodes.hpp"
-
 class SubdividingSearchAgent : public ScActionInitiatedAgent
 {
 public:
-  ScAddr GetActionClass() const;
+  SubdividingSearchAgent();
 
-  ScResult DoProgram(ScAction & action);
+  ScAddr GetActionClass() const override;
+
+  ScResult DoProgram(ScAction & action) override;
 };

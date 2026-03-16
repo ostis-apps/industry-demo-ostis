@@ -8,32 +8,33 @@
 
 #include <sc-memory/sc_agent.hpp>
 
-#include "keynodes/Keynodes.hpp"
 #include "data-structures/ConnectorTemplateInfo.hpp"
 #include "data-structures/WeightTemplateInfo.hpp"
 #include "data-structures/PathInfo.hpp"
 
-class PathFindingAgent : public ScActionInitiatedAgent
+class PathSearchAgent : public ScActionInitiatedAgent
 {
 public:
-  ScAddr GetActionClass() const;
+  PathSearchAgent();
 
-  ScResult DoProgram(ScAction & action);
+  ScAddr GetActionClass() const override;
+
+  ScResult DoProgram(ScAction & action) override;
 
 private:
-  ScStructure formResult(
+  ScStructure FormResult(
       PathInfo const & pathInfo,
       ConnectorTemplateInfo const & connectorTemplateInfo,
       WeightTemplateInfo const & weightTemplateInfo) const;
 
-  void addConnectionIntoStructure(
+  void AddConnectionIntoStructure(
       ScAddr const & first,
       ScAddr const & second,
       ScAddr const & connector,
       ConnectorTemplateInfo const & connectorTemplateInfo,
       ScStructure & structure) const;
 
-  void addPathWeightIntoStructure(
+  void AddPathWeightIntoStructure(
       ScAddr const & pathAddr,
       WeightTemplateInfo const & weightTemplateInfo,
       unsigned const length,

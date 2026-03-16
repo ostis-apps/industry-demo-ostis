@@ -8,20 +8,20 @@
 
 #include <sc-memory/sc_agent.hpp>
 
-#include "keynodes/Keynodes.hpp"
-
 class IsomorphicSearchAgent : public ScActionInitiatedAgent
 {
 public:
-  ScAddr GetActionClass() const;
+  IsomorphicSearchAgent();
 
-  ScResult DoProgram(ScAction & action);
+  ScAddr GetActionClass() const override;
 
-  void formSearchResults(ScAddr const & scTemplateNode, ScStructure & result);
+  ScResult DoProgram(ScAction & action) override;
 
-  void clearPreviousSearchResults(ScAddr const & scTemplate);
+  void FormSearchResults(ScAddr const & scTemplateNode, ScStructure & result);
 
-  ScAddr formNewResultsSetConstruction(ScAddr const & scTemplate, ScStructure & result);
+  void ClearPreviousSearchResults(ScAddr const & scTemplate);
 
-  ScAddr emplaceItemElementsInStructure(ScTemplateSearchResultItem const & item);
+  ScAddr FormNewResultsSetConstruction(ScAddr const & scTemplate, ScStructure & result);
+
+  ScAddr EmplaceItemElementsInStructure(ScTemplateSearchResultItem const & item);
 };

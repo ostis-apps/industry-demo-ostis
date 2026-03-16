@@ -2,7 +2,7 @@ from conan import ConanFile, tools
 from conan.tools.cmake import cmake_layout, CMakeDeps, CMakeToolchain, CMake
 
 
-class OstisExampleAppRecipe(ConanFile):
+class ostis_example_appRecipe(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
 
     @property
@@ -10,7 +10,9 @@ class OstisExampleAppRecipe(ConanFile):
         return tools.get_env("CONAN_RUN_TESTS", False)
     
     def requirements(self):
-        self.requires("sc-machine/0.10.0")
+        self.requires("sc-machine/0.10.5", override=True)
+        self.requires("scl-machine/0.3.1")
+        self.requires("ps-common-lib/0.1.1")
 
     def build_requirements(self):
         self.test_requires("gtest/1.14.0")
