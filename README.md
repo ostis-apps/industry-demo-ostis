@@ -234,6 +234,7 @@ Steps for installing and running the application directly on your system.
         bash ./scripts/install_deps_python.sh
         npm install  # Ensure npm dependencies are installed
         npm run build
+        cd ../..
         ```
 
     *   **Ubuntu/Debian:**
