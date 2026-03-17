@@ -192,9 +192,9 @@ Steps for installing and running the application directly on your system.
     
     ```sh
     sc-machine/0.10.5: ERROR: 
-Package 'a6f28392219b083b0fdbe2ae8cd79268ca37de3a' build failed
-sc-machine/0.10.5: WARN: Build folder /home/yevik/.conan2/p/b/sc-ma3750592625130/b/build/Release
-ERROR: sc-machine/0.10.5: Error in build() method, line 52
+    Package 'a6f28392219b083b0fdbe2ae8cd79268ca37de3a' build failed
+    sc-machine/0.10.5: WARN: Build folder /home/yevik/.conan2/p/b/sc-ma3750592625130/b/build/Release
+    ERROR: sc-machine/0.10.5: Error in build() method, line 52
     cmake.build()
     ConanException: Error 2 while executing
     ```
