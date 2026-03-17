@@ -230,8 +230,8 @@ Steps for installing and running the application directly on your system.
         ```sh
         cd interface/sc-web
         sudo dnf install python3 python3-pip python3-virtualenv nodejs npm
-        bash ./scripts/install_deps_npm.sh
-        bash ./scripts/install_deps_python.sh
+        ./scripts/install_deps_npm.sh
+        ./scripts/install_deps_python.sh
         npm install  # Ensure npm dependencies are installed
         npm run build
         cd ../..
