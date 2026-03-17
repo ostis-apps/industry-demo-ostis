@@ -230,8 +230,10 @@ Steps for installing and running the application directly on your system.
         ```sh
         cd interface/sc-web
         sudo dnf install python3 python3-pip python3-virtualenv nodejs npm
-        bash /scripts/install_deps_npm.sh
-        bash /scripts/install_deps_python.sh
+        bash ./scripts/install_deps_npm.sh
+        bash ./scripts/install_deps_python.sh
+        npm install  # Ensure npm dependencies are installed
+        npm run build
         ```
 
     *   **Ubuntu/Debian:**
@@ -263,6 +265,7 @@ Steps for installing and running the application directly on your system.
     The problem solver contains custom agents for your ostis-system. Build it using CMake:
 
     ```sh
+    cd ../..
     cmake --preset release-conan
     cmake --build --preset release
     ```
