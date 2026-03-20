@@ -7,7 +7,7 @@
 	url = https://github.com/ostis-ai/sc-web
 [submodule "knowledge-base/isa-5.1-ostis"]
 	path = knowledge-base/isa-5.1-ostis
-	url = https://github.com/savushkin-r-d/isa-5.1-ostis
+	url = https://github.com/xcuuuse/isa-5.1-ostis.git
 [submodule "knowledge-base/khutorok-ostis"]
 	path = knowledge-base/khutorok-ostis
 	url = https://github.com/savushkin-r-d/khutorok-ostis
