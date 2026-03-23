@@ -13,7 +13,7 @@
 	url = https://github.com/savushkin-r-d/khutorok-ostis
 [submodule "knowledge-base/s88-ostis"]
 	path = knowledge-base/s88-ostis
-	url = https://github.com/savushkin-r-d/s88-ostis
+	url = https://github.com/ekatsune/s88-ostis.git
 [submodule "knowledge-base/logistics-ostis"]
 	path = knowledge-base/logistics-ostis
 	url = https://github.com/Naevishh/logistics-ostis.git
