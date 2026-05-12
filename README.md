@@ -77,6 +77,31 @@ Docker simplifies setup and provides a consistent environment.
 
     *Important: Rebuild the knowledge base (step 4) after any changes to the knowledge base files.*
 
+## Native Installation by scripts
+
+Steps for installing and running the application directly on your system.
+
+1. **Clone repository:**
+
+    ```sh
+    git clone https://github.com/ostis-apps/industry-demo-ostis.git
+    cd industry-demo-ostis
+    ```
+
+2. **Use script:**
+
+    *   **Fedora:**
+        
+        ```sh
+        ../scripts/fedora_install.sh
+        ```
+
+    *   **Ubuntu:**
+        
+        ```sh
+        ../scripts/ubuntu_install.sh 
+        ```
+
 ## Native Installation
 
 Steps for installing and running the application directly on your system.
