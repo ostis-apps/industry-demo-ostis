@@ -1,0 +1,22 @@
+// Учебный пример из направления 2. Решения заданы для класса ситуаций,
+// поэтому тот же эталон используется и для других экземпляров этого класса.
+training_low_tank_level
+<- sc_node_class;
+<= nrel_inclusion: emergency;
+=> nrel_main_idtf: [низкий уровень в ёмкости] (* <- lang_ru;; *);;
+training_stop_pump
+-> rrel_solution_for_class: training_low_tank_level;
+=> nrel_main_idtf: [остановить насос] (* <- lang_ru;; *);;
+training_connect_reserve_tank
+-> rrel_solution_for_class: training_low_tank_level;
+=> nrel_main_idtf: [подключить резервную ёмкость] (* <- lang_ru;; *);;
+
+training_low_tank_level_example
+<- training_low_tank_level;
+=> nrel_main_idtf: [низкий уровень в учебной ёмкости № 1] (* <- lang_ru;; *);;
+
+training_low_tank_level_lesson
+<- concept_learning_situation;
+-> rrel_employee: training_example_employee;
+-> rrel_emergency_situation: training_low_tank_level_example;
+=> nrel_main_idtf: [тренировка по низкому уровню в ёмкости] (* <- lang_ru;; *);;

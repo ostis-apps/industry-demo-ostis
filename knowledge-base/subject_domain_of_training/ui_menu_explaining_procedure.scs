@@ -1,0 +1,18 @@
+ui_menu_explain_procedure
+<- ui_user_command_class_atom;
+<- ui_user_command_class_view_kb;
+<- ui_one_argument_command_class;
+=> nrel_main_idtf:
+    [Как выполняется процедура?] (* <- lang_ru;; *);
+    [How is the procedure executed?] (* <- lang_en;; *);
+=> ui_nrel_command_template:
+    [*
+        action_explain_procedure _-> ._action_explain_procedure_instance
+        (*
+            _-> rrel_1:: ui_arg_1;;
+        *);;
+        ._action_explain_procedure_instance _<- action;;
+    *];
+=> ui_nrel_command_lang_template:
+    [Как выполняется процедура $ui_arg_1?] (* <- lang_ru;; *);
+    [How is the procedure $ui_arg_1 executed?] (* <- lang_en;; *);;

@@ -9,5 +9,8 @@ ui_start_sc_element
 
 <= nrel_project_decomposition: {
 	sheaf;
+    ui_menu_explain_procedure;
+    training_isa88_quiz_lesson;
+    training_low_tank_level_lesson;
 	nrel_mapping
 };;

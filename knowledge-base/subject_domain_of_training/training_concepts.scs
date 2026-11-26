@@ -1,0 +1,278 @@
+// === Классы действий ===
+action_explain_procedure
+<- sc_node_class;
+<- concept_class;
+=> nrel_main_idtf:
+    [действие объяснения выполнения процедуры] (* <- lang_ru;; *);
+    [action to explain procedure execution] (* <- lang_en;; *);
+<= nrel_inclusion:
+    information_action;;
+
+action_generate_quiz
+<- sc_node_class;
+<- concept_class;
+=> nrel_main_idtf:
+    [действие составления проверочных вопросов] (* <- lang_ru;; *);
+    [action to generate quiz questions] (* <- lang_en;; *);
+<= nrel_inclusion:
+    information_action;;
+
+action_conduct_scenario_training
+<- sc_node_class;
+<- concept_class;
+=> nrel_main_idtf:
+    [действие проведения тренировки по нештатной ситуации] (* <- lang_ru;; *);
+    [action to conduct scenario training] (* <- lang_en;; *);
+<= nrel_inclusion:
+    information_action;;
+
+// === Классы сущностей ===
+concept_procedure_execution_description
+<- sc_node_class;
+=> nrel_main_idtf:
+    [описание выполнения процедуры] (* <- lang_ru;; *);;
+
+concept_learning_situation
+<- sc_node_class;
+=> nrel_main_idtf:
+    [ситуация обучения] (* <- lang_ru;; *);;
+
+concept_quiz_question_set
+<- sc_node_class;
+=> nrel_main_idtf:
+    [набор проверочных вопросов] (* <- lang_ru;; *);;
+
+concept_quiz_question
+<- sc_node_class;
+=> nrel_main_idtf:
+    [проверочный вопрос] (* <- lang_ru;; *);;
+
+concept_reference_answer
+<- sc_node_class;
+=> nrel_main_idtf:
+    [структура-эталон ответа] (* <- lang_ru;; *);;
+
+concept_employee_answer_awaiting_check
+<- sc_node_class;
+=> nrel_main_idtf:
+    [ответ сотрудника, ожидающий проверки] (* <- lang_ru;; *);;
+
+concept_checked_employee_answer
+<- sc_node_class;
+=> nrel_main_idtf:
+    [проверенный ответ сотрудника] (* <- lang_ru;; *);;
+
+concept_scenario_training_session
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сеанс тренировки по нештатной ситуации] (* <- lang_ru;; *);;
+
+concept_training_question
+<- sc_node_class;
+=> nrel_main_idtf:
+    [тренировочный вопрос] (* <- lang_ru;; *);;
+
+concept_training_review
+<- sc_node_class;
+=> nrel_main_idtf:
+    [разбор тренировки] (* <- lang_ru;; *);;
+
+// === Ролевые отношения ===
+rrel_executed_in_state
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [выполняется в состоянии'] (* <- lang_ru;; *);;
+
+rrel_used_equipment
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [задействованное оборудование'] (* <- lang_ru;; *);;
+
+rrel_equipment_option
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [вариант оборудования'] (* <- lang_ru;; *);
+    [equipment option'] (* <- lang_en;; *);;
+
+rrel_employee
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [сотрудник'] (* <- lang_ru;; *);;
+
+rrel_topic
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [тема'] (* <- lang_ru;; *);;
+
+rrel_answer_history
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [история ответов'] (* <- lang_ru;; *);;
+
+rrel_question_count
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [число вопросов'] (* <- lang_ru;; *);;
+
+rrel_difficulty
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [сложность'] (* <- lang_ru;; *);;
+
+rrel_reference_answer
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [эталонный ответ'] (* <- lang_ru;; *);;
+
+rrel_basis
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [основание'] (* <- lang_ru;; *);;
+
+rrel_question
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [вопрос'] (* <- lang_ru;; *);;
+
+rrel_employee_answer
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [ответ сотрудника'] (* <- lang_ru;; *);;
+
+rrel_answer_evaluation
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [оценка ответа'] (* <- lang_ru;; *);;
+
+rrel_missing_element
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [пропущенный элемент'] (* <- lang_ru;; *);;
+
+rrel_hint
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [подсказка'] (* <- lang_ru;; *);;
+
+rrel_emergency_situation
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [нештатная ситуация'] (* <- lang_ru;; *);;
+
+rrel_training_session
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [сеанс тренировки'] (* <- lang_ru;; *);;
+
+rrel_training_review
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [разбор тренировки'] (* <- lang_ru;; *);;
+
+rrel_employee_action
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [действие сотрудника'] (* <- lang_ru;; *);;
+
+rrel_reference_solution
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [эталонное решение'] (* <- lang_ru;; *);;
+
+rrel_evaluation
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [оценка'] (* <- lang_ru;; *);;
+
+rrel_outcome
+<- sc_node_role_relation;
+=> nrel_main_idtf:
+    [итог'] (* <- lang_ru;; *);;
+
+// === Неролевые отношения ===
+nrel_state
+<- sc_node_non_role_relation;
+=> nrel_main_idtf:
+    [состояние*] (* <- lang_ru;; *);;
+
+nrel_reference_solution
+<- sc_node_non_role_relation;
+=> nrel_main_idtf:
+    [эталонное решение*] (* <- lang_ru;; *);;
+
+// === Константы и значения ===
+state_running
+<- sc_node;
+=> nrel_main_idtf:
+    [Running] (* <- lang_en;; *);
+    [Выполнение (Running)] (* <- lang_ru;; *);;
+
+difficulty_easy
+<- sc_node;
+=> nrel_main_idtf:
+    [лёгкая сложность] (* <- lang_ru;; *);;
+
+difficulty_medium
+<- sc_node;
+=> nrel_main_idtf:
+    [средняя сложность] (* <- lang_ru;; *);;
+
+difficulty_hard
+<- sc_node;
+=> nrel_main_idtf:
+    [высокая сложность] (* <- lang_ru;; *);;
+
+evaluation_correct
+<- sc_node;
+=> nrel_main_idtf:
+    [оценка «верно»] (* <- lang_ru;; *);;
+
+evaluation_partially_correct
+<- sc_node;
+=> nrel_main_idtf:
+    [оценка «частично верно»] (* <- lang_ru;; *);;
+
+evaluation_incorrect
+<- sc_node;
+=> nrel_main_idtf:
+    [оценка «неверно»] (* <- lang_ru;; *);;
+
+outcome_scenario_passed
+<- sc_node;
+=> nrel_main_idtf:
+    [итог «сценарий пройден»] (* <- lang_ru;; *);;
+
+outcome_scenario_failed
+<- sc_node;
+=> nrel_main_idtf:
+    [итог «сценарий не пройден»] (* <- lang_ru;; *);;
+
+action_check_employee_answer
+<- sc_node_class;
+<= nrel_inclusion: information_action;
+=> nrel_main_idtf: [проверить ответ сотрудника] (* <- lang_ru;; *);;
+
+action_review_scenario_training
+<- sc_node_class;
+<= nrel_inclusion: information_action;
+=> nrel_main_idtf: [составить разбор тренировки] (* <- lang_ru;; *);;
+
+training_undetermined
+=> nrel_main_idtf: [не определено] (* <- lang_ru;; *);;
+
+rrel_solution_for_class
+<- sc_node_role_relation;
+=> nrel_main_idtf: [решение для класса'] (* <- lang_ru;; *);;
+
+action_submit_training_answer
+<- sc_node_class;
+<= nrel_inclusion: information_action;
+=> nrel_main_idtf: [отправить ответ на проверку] (* <- lang_ru;; *);;
+
+action_show_training_review
+<- sc_node_class;
+<= nrel_inclusion: information_action;
+=> nrel_main_idtf: [просмотреть разбор сеанса тренировки] (* <- lang_ru;; *);;
+
+training_review_pending
+=> nrel_main_idtf: [разбор ожидает проверки ответа] (* <- lang_ru;; *);;

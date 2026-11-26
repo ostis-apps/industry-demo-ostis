@@ -1,0 +1,22 @@
+training_process_cell_quiz_lesson
+<- concept_learning_situation;
+-> rrel_employee: training_example_employee;
+-> rrel_topic: process_cell;
+-> rrel_question_count: [1];
+-> rrel_difficulty: difficulty_easy;
+=> nrel_main_idtf: [проверочное занятие по ячейке процесса] (* <- lang_ru;; *);;
+
+// Условие учебного сценария и его эталон заданы для одной учебной партии.
+training_unreadable_batch_label
+<- emergency;
+=> nrel_main_idtf: [нечитаемая этикетка учебной партии] (* <- lang_ru;; *);
+=> nrel_reference_solution: training_request_label_reprint;;
+
+training_request_label_reprint
+=> nrel_main_idtf: [запросить повторную печать этикетки] (* <- lang_ru;; *);;
+
+training_batch_label_lesson
+<- concept_learning_situation;
+-> rrel_employee: training_example_employee;
+-> rrel_emergency_situation: training_unreadable_batch_label;
+=> nrel_main_idtf: [тренировка по маркировке партии] (* <- lang_ru;; *);;

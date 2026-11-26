@@ -1,0 +1,18 @@
+// Учебный вариант рецепта с явно заданными состояниями и единицей оборудования.
+training_curd_procedure
+<- recipe_procedure;
+=> nrel_main_idtf: [учебная процедура приготовления творожной массы] (* <- lang_ru;; *);
+-> rrel_1: training_curd_filling;
+-> rrel_2: training_curd_cooking;;
+
+training_curd_filling
+<- filling;
+=> nrel_main_idtf: [наполнение коагулятора №1] (* <- lang_ru;; *);
+-> rrel_executed_in_state: state_running;
+-> rrel_used_equipment: coagulator_1;;
+
+training_curd_cooking
+<- cooking;
+=> nrel_main_idtf: [приготовление творожной массы в коагуляторе №1] (* <- lang_ru;; *);
+-> rrel_executed_in_state: state_running;
+-> rrel_used_equipment: coagulator_1;;

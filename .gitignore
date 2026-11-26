@@ -10,6 +10,7 @@ repo
 .cache/
 *.db
 *.txt
+!/problem-solver/cxx/training-module/CMakeLists.txt
 !conanfile.txt
 !requirements.txt
 *.log

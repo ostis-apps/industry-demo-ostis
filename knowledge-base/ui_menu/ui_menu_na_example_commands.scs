@@ -13,5 +13,10 @@ ui_menu_na_example_commands
 {
 	ui_menu_fixed_search_strategy_template_search;
 	ui_menu_run_scp_program;
+	ui_menu_explain_procedure;
+	ui_menu_generate_quiz;
+	ui_menu_conduct_scenario_training;
+	ui_menu_submit_training_answer;
+	ui_menu_show_training_review;
 	ui_menu_for_searching_students_with_good_marks
 };;
