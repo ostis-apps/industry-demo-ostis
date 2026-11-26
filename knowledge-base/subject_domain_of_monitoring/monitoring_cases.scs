@@ -1,0 +1,636 @@
+mon_site_tank
+=> nrel_main_idtf: [ёмкость №1] (* <- lang_ru;; *);;
+
+mon_site_heating
+=> nrel_main_idtf: [аппарат нагрева №1] (* <- lang_ru;; *);;
+
+mon_site_valve
+=> nrel_main_idtf: [клапанный узел №1] (* <- lang_ru;; *);;
+
+mon_site_pump
+=> nrel_main_idtf: [насосная станция №1] (* <- lang_ru;; *);;
+
+mon_site_route
+=> nrel_main_idtf: [линия подачи №1] (* <- lang_ru;; *);;
+
+mon_site_phase
+=> nrel_main_idtf: [аппарат выполнения фазы №1] (* <- lang_ru;; *);;
+
+mon_site_wash
+=> nrel_main_idtf: [моечная станция №1] (* <- lang_ru;; *);;
+
+mon_device_level
+=> nrel_main_idtf: [датчик уровня ёмкости №1] (* <- lang_ru;; *);;
+
+mon_device_temp
+=> nrel_main_idtf: [датчик температуры аппарата №1] (* <- lang_ru;; *);;
+
+mon_device_flow
+=> nrel_main_idtf: [расходомер линии №1] (* <- lang_ru;; *);;
+
+mon_device_pressure
+=> nrel_main_idtf: [датчик давления линии №1] (* <- lang_ru;; *);;
+
+mon_device_open
+=> nrel_main_idtf: [сигнал открытия маршрута] (* <- lang_ru;; *);;
+
+mon_device_valve_wait
+=> nrel_main_idtf: [таймер команды клапану] (* <- lang_ru;; *);;
+
+mon_device_feedback
+=> nrel_main_idtf: [сигнал подтверждения положения] (* <- lang_ru;; *);;
+
+mon_device_pump
+=> nrel_main_idtf: [насос №1] (* <- lang_ru;; *);;
+
+mon_device_pump_current
+=> nrel_main_idtf: [датчик тока насоса №1] (* <- lang_ru;; *);;
+
+mon_device_phase_time
+=> nrel_main_idtf: [таймер активной фазы] (* <- lang_ru;; *);;
+
+mon_device_wash_temp
+=> nrel_main_idtf: [термометр моющего раствора] (* <- lang_ru;; *);;
+
+mon_device_concentration
+=> nrel_main_idtf: [датчик концентрации моющего раствора] (* <- lang_ru;; *);;
+
+mon_device_peer
+=> nrel_main_idtf: [резервный датчик уровня] (* <- lang_ru;; *);;
+
+mon_limit_level_low
+=> nrel_main_idtf: [нижняя уставка (датчик уровня ёмкости №1)] (* <- lang_ru;; *);
+-> rrel_mon_value: [20];;
+
+mon_limit_level_high
+=> nrel_main_idtf: [верхняя уставка (датчик уровня ёмкости №1)] (* <- lang_ru;; *);
+-> rrel_mon_value: [80];;
+
+mon_limit_temp_low
+=> nrel_main_idtf: [нижняя уставка (датчик температуры аппарата №1)] (* <- lang_ru;; *);
+-> rrel_mon_value: [60];;
+
+mon_limit_temp_high
+=> nrel_main_idtf: [верхняя уставка (датчик температуры аппарата №1)] (* <- lang_ru;; *);
+-> rrel_mon_value: [80];;
+
+mon_limit_valve_wait_low
+=> nrel_main_idtf: [нижняя уставка (таймер команды клапану)] (* <- lang_ru;; *);
+-> rrel_mon_value: [0];;
+
+mon_limit_valve_wait_high
+=> nrel_main_idtf: [верхняя уставка (таймер команды клапану)] (* <- lang_ru;; *);
+-> rrel_mon_value: [3];;
+
+mon_limit_feedback_low
+=> nrel_main_idtf: [нижняя уставка (сигнал подтверждения положения)] (* <- lang_ru;; *);
+-> rrel_mon_value: [0.5];;
+
+mon_limit_feedback_high
+=> nrel_main_idtf: [верхняя уставка (сигнал подтверждения положения)] (* <- lang_ru;; *);
+-> rrel_mon_value: [1];;
+
+mon_limit_pump_current_low
+=> nrel_main_idtf: [нижняя уставка (датчик тока насоса №1)] (* <- lang_ru;; *);
+-> rrel_mon_value: [0];;
+
+mon_limit_pump_current_high
+=> nrel_main_idtf: [верхняя уставка (датчик тока насоса №1)] (* <- lang_ru;; *);
+-> rrel_mon_value: [12];;
+
+mon_limit_flow_low
+=> nrel_main_idtf: [нижняя уставка (расходомер линии №1)] (* <- lang_ru;; *);
+-> rrel_mon_value: [10];;
+
+mon_limit_flow_high
+=> nrel_main_idtf: [верхняя уставка (расходомер линии №1)] (* <- lang_ru;; *);
+-> rrel_mon_value: [50];;
+
+mon_limit_pressure_low
+=> nrel_main_idtf: [нижняя уставка (датчик давления линии №1)] (* <- lang_ru;; *);
+-> rrel_mon_value: [2];;
+
+mon_limit_pressure_high
+=> nrel_main_idtf: [верхняя уставка (датчик давления линии №1)] (* <- lang_ru;; *);
+-> rrel_mon_value: [6];;
+
+mon_limit_open_low
+=> nrel_main_idtf: [нижняя уставка (сигнал открытия маршрута)] (* <- lang_ru;; *);
+-> rrel_mon_value: [0];;
+
+mon_limit_open_high
+=> nrel_main_idtf: [верхняя уставка (сигнал открытия маршрута)] (* <- lang_ru;; *);
+-> rrel_mon_value: [0.5];;
+
+mon_limit_peer_low
+=> nrel_main_idtf: [нижняя уставка (резервный датчик уровня)] (* <- lang_ru;; *);
+-> rrel_mon_value: [20];;
+
+mon_limit_peer_high
+=> nrel_main_idtf: [верхняя уставка (резервный датчик уровня)] (* <- lang_ru;; *);
+-> rrel_mon_value: [80];;
+
+mon_limit_phase_time_low
+=> nrel_main_idtf: [нижняя уставка (таймер активной фазы)] (* <- lang_ru;; *);
+-> rrel_mon_value: [0];;
+
+mon_limit_phase_time_high
+=> nrel_main_idtf: [верхняя уставка (таймер активной фазы)] (* <- lang_ru;; *);
+-> rrel_mon_value: [12];;
+
+mon_limit_wash_temp_low
+=> nrel_main_idtf: [нижняя уставка (термометр моющего раствора)] (* <- lang_ru;; *);
+-> rrel_mon_value: [60];;
+
+mon_limit_wash_temp_high
+=> nrel_main_idtf: [верхняя уставка (термометр моющего раствора)] (* <- lang_ru;; *);
+-> rrel_mon_value: [85];;
+
+mon_limit_concentration_low
+=> nrel_main_idtf: [нижняя уставка (датчик концентрации моющего раствора)] (* <- lang_ru;; *);
+-> rrel_mon_value: [1];;
+
+mon_limit_concentration_high
+=> nrel_main_idtf: [верхняя уставка (датчик концентрации моющего раствора)] (* <- lang_ru;; *);
+-> rrel_mon_value: [3];;
+
+mon_channel_level_low
+-> rrel_mon_device: mon_device_level;
+-> rrel_mon_kind: mon_level;
+-> rrel_mon_low: mon_limit_level_low;
+-> rrel_mon_high: mon_limit_level_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [100];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [30];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [2];; -> rrel_mon_value: [15];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [7];; -> rrel_mon_value: [10];; *);;
+
+mon_case_low
+=> nrel_main_idtf: [Диагностика: низкий уровень в работе] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_tank;
+-> rrel_mon_profile: mon_profile_tank;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_level_low;;
+
+mon_case_idle
+=> nrel_main_idtf: [Диагностика: низкий уровень в Idle] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_tank;
+-> rrel_mon_profile: mon_profile_tank;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: mon_idle;
+-> rrel_mon_sensor: mon_channel_level_low;
+-> rrel_mon_procedure_input: training_curd_procedure;
+-> rrel_mon_phase_input: training_curd_filling;;
+
+mon_channel_level_high
+-> rrel_mon_device: mon_device_level;
+-> rrel_mon_kind: mon_level;
+-> rrel_mon_low: mon_limit_level_low;
+-> rrel_mon_high: mon_limit_level_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [100];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [70];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [2];; -> rrel_mon_value: [85];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [7];; -> rrel_mon_value: [95];; *);;
+
+mon_case_high
+=> nrel_main_idtf: [Диагностика: переполнение ёмкости] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_tank;
+-> rrel_mon_profile: mon_profile_tank;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_level_high;;
+
+mon_channel_boundary
+-> rrel_mon_device: mon_device_level;
+-> rrel_mon_kind: mon_level;
+-> rrel_mon_low: mon_limit_level_low;
+-> rrel_mon_high: mon_limit_level_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [100];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [75];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [5];; -> rrel_mon_value: [80];; *);;
+
+mon_case_normal
+=> nrel_main_idtf: [Диагностика: уровень на верхней уставке] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_tank;
+-> rrel_mon_profile: mon_profile_tank;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_boundary;;
+
+mon_channel_forecast
+-> rrel_mon_device: mon_device_temp;
+-> rrel_mon_kind: mon_temp;
+-> rrel_mon_low: mon_limit_temp_low;
+-> rrel_mon_high: mon_limit_temp_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [120];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [69];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [10];; -> rrel_mon_value: [74];; *);;
+
+mon_case_forecast
+=> nrel_main_idtf: [Диагностика: рост температуры] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_heating;
+-> rrel_mon_profile: mon_profile_heating;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_forecast;;
+
+mon_channel_temp_high
+-> rrel_mon_device: mon_device_temp;
+-> rrel_mon_kind: mon_temp;
+-> rrel_mon_low: mon_limit_temp_low;
+-> rrel_mon_high: mon_limit_temp_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [120];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [76];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [1];; -> rrel_mon_value: [83];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [6];; -> rrel_mon_value: [85];; *);;
+
+mon_case_temperature
+=> nrel_main_idtf: [Диагностика: длительный перегрев] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_heating;
+-> rrel_mon_profile: mon_profile_heating;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_temp_high;;
+
+mon_channel_temp_brief
+-> rrel_mon_device: mon_device_temp;
+-> rrel_mon_kind: mon_temp;
+-> rrel_mon_low: mon_limit_temp_low;
+-> rrel_mon_high: mon_limit_temp_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [120];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [76];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [1];; -> rrel_mon_value: [83];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [3];; -> rrel_mon_value: [85];; *);;
+
+mon_case_brief
+=> nrel_main_idtf: [Диагностика: кратковременный перегрев] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_heating;
+-> rrel_mon_profile: mon_profile_heating;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_temp_brief;;
+
+mon_channel_valve_wait
+-> rrel_mon_device: mon_device_valve_wait;
+-> rrel_mon_kind: mon_valve_wait;
+-> rrel_mon_low: mon_limit_valve_wait_low;
+-> rrel_mon_high: mon_limit_valve_wait_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [60];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [0];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [4];; -> rrel_mon_value: [4];; *);;
+
+mon_channel_valve_feedback
+-> rrel_mon_device: mon_device_feedback;
+-> rrel_mon_kind: mon_feedback;
+-> rrel_mon_low: mon_limit_feedback_low;
+-> rrel_mon_high: mon_limit_feedback_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [1];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [4];; -> rrel_mon_value: [0];; *);;
+
+mon_case_valve
+=> nrel_main_idtf: [Диагностика: таймаут клапана] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_valve;
+-> rrel_mon_profile: mon_profile_valve;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_valve_wait;
+-> rrel_mon_sensor: mon_channel_valve_feedback;;
+
+mon_channel_acknowledged_wait
+-> rrel_mon_device: mon_device_valve_wait;
+-> rrel_mon_kind: mon_valve_wait;
+-> rrel_mon_low: mon_limit_valve_wait_low;
+-> rrel_mon_high: mon_limit_valve_wait_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [60];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [0];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [4];; -> rrel_mon_value: [4];; *);;
+
+mon_channel_acknowledged_feedback
+-> rrel_mon_device: mon_device_feedback;
+-> rrel_mon_kind: mon_feedback;
+-> rrel_mon_low: mon_limit_feedback_low;
+-> rrel_mon_high: mon_limit_feedback_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [1];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [4];; -> rrel_mon_value: [1];; *);;
+
+mon_case_acknowledged
+=> nrel_main_idtf: [Диагностика: подтверждённое положение клапана] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_valve;
+-> rrel_mon_profile: mon_profile_valve;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_acknowledged_wait;
+-> rrel_mon_sensor: mon_channel_acknowledged_feedback;;
+
+mon_metric_worn_current
+-> rrel_mon_kind: mon_current;
+-> rrel_mon_warn: [2];
+-> rrel_mon_severe: [4];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [8];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [10];; -> rrel_mon_value: [13];; *);;
+
+mon_metric_worn_response_time
+-> rrel_mon_kind: mon_response_time;
+-> rrel_mon_warn: [1];
+-> rrel_mon_severe: [2];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [1];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [10];; -> rrel_mon_value: [4];; *);;
+
+mon_metric_worn_cycles
+-> rrel_mon_kind: mon_cycles;
+-> rrel_mon_warn: [900];
+-> rrel_mon_severe: [1000];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [998];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [10];; -> rrel_mon_value: [1001];; *);;
+
+mon_metric_worn_hours
+-> rrel_mon_kind: mon_hours;
+-> rrel_mon_warn: [1800];
+-> rrel_mon_severe: [2000];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [1940];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [10];; -> rrel_mon_value: [2000];; *);;
+
+mon_module_worn
+-> rrel_mon_device: mon_device_pump;
+-> rrel_mon_kind: mon_pump;
+-> rrel_mon_metric: mon_metric_worn_current;
+-> rrel_mon_metric: mon_metric_worn_response_time;
+-> rrel_mon_metric: mon_metric_worn_cycles;
+-> rrel_mon_metric: mon_metric_worn_hours;;
+
+mon_channel_worn_amps
+-> rrel_mon_device: mon_device_pump_current;
+-> rrel_mon_kind: mon_pump_current;
+-> rrel_mon_low: mon_limit_pump_current_low;
+-> rrel_mon_high: mon_limit_pump_current_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [50];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [13];; *);;
+
+mon_case_pump
+=> nrel_main_idtf: [Диагностика: износ и перегрузка насоса] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_pump;
+-> rrel_mon_profile: mon_profile_pump;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_worn_amps;
+-> rrel_mon_module: mon_module_worn;
+-> rrel_mon_procedure_input: training_curd_procedure;
+-> rrel_mon_phase_input: training_curd_filling;;
+
+mon_metric_healthy_current
+-> rrel_mon_kind: mon_current;
+-> rrel_mon_warn: [2];
+-> rrel_mon_severe: [4];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [8];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [10];; -> rrel_mon_value: [8];; *);;
+
+mon_metric_healthy_cycles
+-> rrel_mon_kind: mon_cycles;
+-> rrel_mon_warn: [900];
+-> rrel_mon_severe: [1000];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [250];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [10];; -> rrel_mon_value: [265];; *);;
+
+mon_module_healthy
+-> rrel_mon_device: mon_device_pump;
+-> rrel_mon_kind: mon_pump;
+-> rrel_mon_metric: mon_metric_healthy_current;
+-> rrel_mon_metric: mon_metric_healthy_cycles;;
+
+mon_channel_healthy_amps
+-> rrel_mon_device: mon_device_pump_current;
+-> rrel_mon_kind: mon_pump_current;
+-> rrel_mon_low: mon_limit_pump_current_low;
+-> rrel_mon_high: mon_limit_pump_current_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [50];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [8];; *);;
+
+mon_case_healthy
+=> nrel_main_idtf: [Диагностика: исправный насос] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_pump;
+-> rrel_mon_profile: mon_profile_pump;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_healthy_amps;
+-> rrel_mon_module: mon_module_healthy;;
+
+mon_channel_flow
+-> rrel_mon_device: mon_device_flow;
+-> rrel_mon_kind: mon_flow;
+-> rrel_mon_low: mon_limit_flow_low;
+-> rrel_mon_high: mon_limit_flow_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [100];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [8];; *);;
+
+mon_channel_pressure
+-> rrel_mon_device: mon_device_pressure;
+-> rrel_mon_kind: mon_pressure;
+-> rrel_mon_low: mon_limit_pressure_low;
+-> rrel_mon_high: mon_limit_pressure_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [100];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [1];; *);;
+
+mon_channel_open
+-> rrel_mon_device: mon_device_open;
+-> rrel_mon_kind: mon_open;
+-> rrel_mon_low: mon_limit_open_low;
+-> rrel_mon_high: mon_limit_open_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [1];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [1];; *);;
+
+mon_case_route
+=> nrel_main_idtf: [Диагностика: падение расхода и давления] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_route;
+-> rrel_mon_profile: mon_profile_route;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_flow;
+-> rrel_mon_sensor: mon_channel_pressure;
+-> rrel_mon_sensor: mon_channel_open;;
+
+mon_channel_stuck
+-> rrel_mon_device: mon_device_level;
+-> rrel_mon_kind: mon_level;
+-> rrel_mon_low: mon_limit_level_low;
+-> rrel_mon_high: mon_limit_level_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [100];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [50];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [3];; -> rrel_mon_value: [50];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [7];; -> rrel_mon_value: [50];; *);
+-> rrel_mon_stuck_window: [5];;
+
+mon_case_stuck
+=> nrel_main_idtf: [Диагностика: залипание датчика] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_tank;
+-> rrel_mon_profile: mon_profile_tank;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_stuck;;
+
+mon_channel_invalid
+-> rrel_mon_device: mon_device_level;
+-> rrel_mon_kind: mon_level;
+-> rrel_mon_low: mon_limit_level_low;
+-> rrel_mon_high: mon_limit_level_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [100];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [110];; *);;
+
+mon_case_invalid
+=> nrel_main_idtf: [Диагностика: выход за физический диапазон] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_tank;
+-> rrel_mon_profile: mon_profile_tank;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_invalid;;
+
+mon_channel_peer
+-> rrel_mon_device: mon_device_peer;
+-> rrel_mon_kind: mon_level;
+-> rrel_mon_low: mon_limit_peer_low;
+-> rrel_mon_high: mon_limit_peer_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [100];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [1];; -> rrel_mon_value: [51];; *);;
+
+mon_channel_pair
+-> rrel_mon_device: mon_device_level;
+-> rrel_mon_kind: mon_level;
+-> rrel_mon_low: mon_limit_level_low;
+-> rrel_mon_high: mon_limit_level_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [100];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [1];; -> rrel_mon_value: [65];; *);
+-> rrel_mon_peer: mon_channel_peer;
+-> rrel_mon_tolerance: [5];;
+
+mon_case_pair
+=> nrel_main_idtf: [Диагностика: расхождение парных датчиков] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_tank;
+-> rrel_mon_profile: mon_profile_tank;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_pair;
+-> rrel_mon_sensor: mon_channel_peer;;
+
+mon_channel_phase
+-> rrel_mon_device: mon_device_phase_time;
+-> rrel_mon_kind: mon_phase_time;
+-> rrel_mon_low: mon_limit_phase_time_low;
+-> rrel_mon_high: mon_limit_phase_time_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [300];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [5];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [10];; -> rrel_mon_value: [15];; *);;
+
+mon_case_timeout
+=> nrel_main_idtf: [Диагностика: превышено время активной фазы] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_phase;
+-> rrel_mon_profile: mon_profile_phase;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_phase;;
+
+mon_channel_wash_temp
+-> rrel_mon_device: mon_device_wash_temp;
+-> rrel_mon_kind: mon_wash_temp;
+-> rrel_mon_low: mon_limit_wash_temp_low;
+-> rrel_mon_high: mon_limit_wash_temp_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [100];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [50];; *);;
+
+mon_channel_concentration
+-> rrel_mon_device: mon_device_concentration;
+-> rrel_mon_kind: mon_concentration;
+-> rrel_mon_low: mon_limit_concentration_low;
+-> rrel_mon_high: mon_limit_concentration_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [10];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [2];; *);;
+
+mon_case_wash
+=> nrel_main_idtf: [Диагностика: холодный моющий раствор] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_wash;
+-> rrel_mon_profile: mon_profile_wash;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_wash_temp;
+-> rrel_mon_sensor: mon_channel_concentration;;
+
+mon_channel_missing
+-> rrel_mon_device: mon_device_level;
+-> rrel_mon_kind: mon_level;
+-> rrel_mon_low: mon_limit_level_low;
+-> rrel_mon_high: mon_limit_level_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [100];;
+
+mon_case_incomplete
+=> nrel_main_idtf: [Диагностика: пропущено измерение уровня] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_tank;
+-> rrel_mon_profile: mon_profile_tank;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [15];
+-> rrel_mon_state_input: state_running;
+-> rrel_mon_sensor: mon_channel_missing;;
+
+// Отрицательный тренд и тот же ряд за пределами горизонта.
+mon_channel_cooling
+-> rrel_mon_device: mon_device_temp;
+-> rrel_mon_kind: mon_temp;
+-> rrel_mon_low: mon_limit_temp_low;
+-> rrel_mon_high: mon_limit_temp_high;
+-> rrel_mon_phys_min: [0];
+-> rrel_mon_phys_max: [120];
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [0];; -> rrel_mon_value: [70];; *);
+-> rrel_mon_sample: ... (* -> rrel_mon_time: [10];; -> rrel_mon_value: [65];; *);;
+
+mon_case_cooling
+=> nrel_main_idtf: [Диагностика: снижение температуры] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_heating;
+-> rrel_mon_sensor: mon_channel_cooling;
+-> rrel_mon_profile: mon_profile_heating;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [10];;
+
+mon_case_short_horizon
+=> nrel_main_idtf: [Диагностика: короткий горизонт прогноза] (* <- lang_ru;; *);
+-> rrel_mon_object: mon_site_heating;
+-> rrel_mon_sensor: mon_channel_cooling;
+-> rrel_mon_profile: mon_profile_heating;
+-> rrel_mon_window: [10];
+-> rrel_mon_horizon: [5];;

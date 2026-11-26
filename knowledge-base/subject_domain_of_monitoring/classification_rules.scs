@@ -1,0 +1,248 @@
+mon_fault_low_level
+<- sc_node_class;
+=> nrel_main_idtf: [нештатная ситуация: низкий уровень в ёмкости] (* <- lang_ru;; *);
+<= nrel_inclusion: emergency;;
+
+mon_fault_overflow
+<- sc_node_class;
+=> nrel_main_idtf: [нештатная ситуация: переполнение ёмкости] (* <- lang_ru;; *);
+<= nrel_inclusion: emergency;;
+
+mon_fault_thermal
+<- sc_node_class;
+=> nrel_main_idtf: [нештатная ситуация: температура вне режима] (* <- lang_ru;; *);
+<= nrel_inclusion: emergency;;
+
+mon_fault_valve
+<- sc_node_class;
+=> nrel_main_idtf: [нештатная ситуация: клапан не достиг положения] (* <- lang_ru;; *);
+<= nrel_inclusion: emergency;;
+
+mon_fault_pump
+<- sc_node_class;
+=> nrel_main_idtf: [нештатная ситуация: перегрузка или износ насоса] (* <- lang_ru;; *);
+<= nrel_inclusion: emergency;;
+
+mon_fault_restricted
+<- sc_node_class;
+=> nrel_main_idtf: [нештатная ситуация: падение расхода и давления при открытом маршруте] (* <- lang_ru;; *);
+<= nrel_inclusion: emergency;;
+
+mon_fault_bad_sensor
+<- sc_node_class;
+=> nrel_main_idtf: [нештатная ситуация: недостоверный датчик] (* <- lang_ru;; *);
+<= nrel_inclusion: emergency;;
+
+mon_fault_timeout
+<- sc_node_class;
+=> nrel_main_idtf: [нештатная ситуация: таймаут фазы] (* <- lang_ru;; *);
+<= nrel_inclusion: emergency;;
+
+mon_fault_wash
+<- sc_node_class;
+=> nrel_main_idtf: [нештатная ситуация: неэффективная мойка] (* <- lang_ru;; *);
+<= nrel_inclusion: emergency;;
+
+mon_rule_low
+-> rrel_mon_condition: mon_term_level_compliance_low_context;
+-> rrel_mon_class: mon_fault_low_level;
+-> rrel_mon_cause: mon_supply;
+-> rrel_mon_severity: mon_critical;
+-> rrel_mon_priority: [5];;
+
+mon_rule_high
+-> rrel_mon_condition: mon_term_level_compliance_high;
+-> rrel_mon_class: mon_fault_overflow;
+-> rrel_mon_cause: mon_inlet;
+-> rrel_mon_severity: mon_critical;
+-> rrel_mon_priority: [6];;
+
+mon_rule_temperature_low
+-> rrel_mon_condition: mon_term_temp_compliance_low_5;
+-> rrel_mon_class: mon_fault_thermal;
+-> rrel_mon_cause: mon_heating;
+-> rrel_mon_severity: mon_critical;
+-> rrel_mon_priority: [5];;
+
+mon_rule_temperature_high
+-> rrel_mon_condition: mon_term_temp_compliance_high_5;
+-> rrel_mon_class: mon_fault_thermal;
+-> rrel_mon_cause: mon_heating;
+-> rrel_mon_severity: mon_critical;
+-> rrel_mon_priority: [5];;
+
+mon_rule_valve
+-> rrel_mon_condition: mon_term_valve_wait_compliance_high;
+-> rrel_mon_condition: mon_term_feedback_compliance_low;
+-> rrel_mon_class: mon_fault_valve;
+-> rrel_mon_cause: mon_actuator;
+-> rrel_mon_severity: mon_critical;
+-> rrel_mon_priority: [5];;
+
+mon_rule_wear
+-> rrel_mon_condition: mon_term_pump_degradation_significant;
+-> rrel_mon_class: mon_fault_pump;
+-> rrel_mon_cause: mon_bearing;
+-> rrel_mon_severity: mon_critical;
+-> rrel_mon_priority: [5];;
+
+mon_rule_overload
+-> rrel_mon_condition: mon_term_pump_current_compliance_high;
+-> rrel_mon_class: mon_fault_pump;
+-> rrel_mon_cause: mon_bearing;
+-> rrel_mon_severity: mon_critical;
+-> rrel_mon_priority: [5];;
+
+mon_rule_route
+-> rrel_mon_condition: mon_term_flow_compliance_low;
+-> rrel_mon_condition: mon_term_pressure_compliance_low;
+-> rrel_mon_condition: mon_term_open_compliance_high;
+-> rrel_mon_class: mon_fault_restricted;
+-> rrel_mon_cause: mon_restriction;
+-> rrel_mon_severity: mon_critical;
+-> rrel_mon_priority: [5];;
+
+mon_rule_sensor
+-> rrel_mon_condition: mon_term_sensor_validation_unreliable;
+-> rrel_mon_class: mon_fault_bad_sensor;
+-> rrel_mon_cause: mon_instrument;
+-> rrel_mon_severity: mon_critical;
+-> rrel_mon_priority: [10];;
+
+mon_rule_phase
+-> rrel_mon_condition: mon_term_phase_time_compliance_high;
+-> rrel_mon_class: mon_fault_timeout;
+-> rrel_mon_cause: mon_blocked;
+-> rrel_mon_severity: mon_warning;
+-> rrel_mon_priority: [5];;
+
+mon_rule_wash_wash_temp
+-> rrel_mon_condition: mon_term_wash_temp_compliance_low;
+-> rrel_mon_class: mon_fault_wash;
+-> rrel_mon_cause: mon_wash;
+-> rrel_mon_severity: mon_warning;
+-> rrel_mon_priority: [5];;
+
+mon_rule_wash_concentration
+-> rrel_mon_condition: mon_term_concentration_compliance_low;
+-> rrel_mon_class: mon_fault_wash;
+-> rrel_mon_cause: mon_wash;
+-> rrel_mon_severity: mon_warning;
+-> rrel_mon_priority: [5];;
+
+mon_profile_tank
+-> rrel_mon_rule: mon_rule_low;
+-> rrel_mon_rule: mon_rule_high;
+-> rrel_mon_rule: mon_rule_sensor;;
+
+mon_profile_heating
+-> rrel_mon_rule: mon_rule_sensor;
+-> rrel_mon_rule: mon_rule_temperature_low;
+-> rrel_mon_rule: mon_rule_temperature_high;;
+
+mon_profile_valve
+-> rrel_mon_rule: mon_rule_sensor;
+-> rrel_mon_rule: mon_rule_valve;;
+
+mon_profile_pump
+-> rrel_mon_rule: mon_rule_sensor;
+-> rrel_mon_rule: mon_rule_wear;
+-> rrel_mon_rule: mon_rule_overload;;
+
+mon_profile_route
+-> rrel_mon_rule: mon_rule_sensor;
+-> rrel_mon_rule: mon_rule_route;;
+
+mon_profile_phase
+-> rrel_mon_rule: mon_rule_sensor;
+-> rrel_mon_rule: mon_rule_phase;;
+
+mon_profile_wash
+-> rrel_mon_rule: mon_rule_sensor;
+-> rrel_mon_rule: mon_rule_wash_wash_temp;
+-> rrel_mon_rule: mon_rule_wash_concentration;;
+
+mon_term_level_compliance_low_context
+-> rrel_mon_kind: mon_level;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_low;;
+mon_context_sensitive -> mon_term_level_compliance_low_context;;
+
+mon_term_level_compliance_high
+-> rrel_mon_kind: mon_level;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_high;;
+
+mon_term_temp_compliance_low_5
+-> rrel_mon_kind: mon_temp;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_low;
+-> rrel_mon_min_duration: [5];;
+
+mon_term_temp_compliance_high_5
+-> rrel_mon_kind: mon_temp;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_high;
+-> rrel_mon_min_duration: [5];;
+
+mon_term_valve_wait_compliance_high
+-> rrel_mon_kind: mon_valve_wait;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_high;;
+
+mon_term_feedback_compliance_low
+-> rrel_mon_kind: mon_feedback;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_low;;
+
+mon_term_pump_degradation_significant
+-> rrel_mon_kind: mon_pump;
+-> rrel_mon_attribute: rrel_mon_degradation;
+-> rrel_mon_expected: mon_significant;;
+
+mon_term_pump_current_compliance_high
+-> rrel_mon_kind: mon_pump_current;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_high;;
+
+mon_term_flow_compliance_low
+-> rrel_mon_kind: mon_flow;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_low;;
+
+mon_term_pressure_compliance_low
+-> rrel_mon_kind: mon_pressure;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_low;;
+
+mon_term_open_compliance_high
+-> rrel_mon_kind: mon_open;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_high;;
+
+mon_term_sensor_validation_unreliable
+-> rrel_mon_kind: mon_any_sensor;
+-> rrel_mon_attribute: rrel_mon_validation;
+-> rrel_mon_expected: mon_unreliable;;
+
+mon_term_phase_time_compliance_high
+-> rrel_mon_kind: mon_phase_time;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_high;;
+
+mon_term_wash_temp_compliance_low
+-> rrel_mon_kind: mon_wash_temp;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_low;;
+
+mon_term_concentration_compliance_low
+-> rrel_mon_kind: mon_concentration;
+-> rrel_mon_attribute: rrel_mon_compliance;
+-> rrel_mon_expected: mon_low;;
+
+mon_idle
+-> rrel_mon_exception: mon_idle_low_level;;
+
+mon_idle_low_level
+-> rrel_mon_kind: mon_level;
+-> rrel_mon_expected: mon_low;;

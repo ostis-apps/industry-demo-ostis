@@ -1,0 +1,436 @@
+rrel_mon_source_observation
+<- sc_node_role_relation;
+=> nrel_main_idtf: [исходная ситуация наблюдения′] (* <- lang_ru;; *);;
+
+rrel_mon_object
+<- sc_node_role_relation;
+=> nrel_main_idtf: [объект наблюдения′] (* <- lang_ru;; *);;
+
+rrel_mon_sensor
+<- sc_node_role_relation;
+=> nrel_main_idtf: [канал измерения′] (* <- lang_ru;; *);;
+
+rrel_mon_device
+<- sc_node_role_relation;
+=> nrel_main_idtf: [наблюдаемое устройство′] (* <- lang_ru;; *);;
+
+rrel_mon_sample
+<- sc_node_role_relation;
+=> nrel_main_idtf: [отсчёт′] (* <- lang_ru;; *);;
+
+rrel_mon_time
+<- sc_node_role_relation;
+=> nrel_main_idtf: [время отсчёта, мин′] (* <- lang_ru;; *);;
+
+rrel_mon_value
+<- sc_node_role_relation;
+=> nrel_main_idtf: [измеренное значение′] (* <- lang_ru;; *);;
+
+rrel_mon_kind
+<- sc_node_role_relation;
+=> nrel_main_idtf: [вид канала или показателя′] (* <- lang_ru;; *);;
+
+rrel_mon_low
+<- sc_node_role_relation;
+=> nrel_main_idtf: [нижняя уставка′] (* <- lang_ru;; *);;
+
+rrel_mon_high
+<- sc_node_role_relation;
+=> nrel_main_idtf: [верхняя уставка′] (* <- lang_ru;; *);;
+
+rrel_mon_phys_min
+<- sc_node_role_relation;
+=> nrel_main_idtf: [физический минимум′] (* <- lang_ru;; *);;
+
+rrel_mon_phys_max
+<- sc_node_role_relation;
+=> nrel_main_idtf: [физический максимум′] (* <- lang_ru;; *);;
+
+rrel_mon_stuck_window
+<- sc_node_role_relation;
+=> nrel_main_idtf: [интервал проверки залипания, мин′] (* <- lang_ru;; *);;
+
+rrel_mon_peer
+<- sc_node_role_relation;
+=> nrel_main_idtf: [парный измерительный канал′] (* <- lang_ru;; *);;
+
+rrel_mon_tolerance
+<- sc_node_role_relation;
+=> nrel_main_idtf: [допустимое расхождение′] (* <- lang_ru;; *);;
+
+rrel_mon_window
+<- sc_node_role_relation;
+=> nrel_main_idtf: [окно прогноза, мин′] (* <- lang_ru;; *);;
+
+rrel_mon_horizon
+<- sc_node_role_relation;
+=> nrel_main_idtf: [горизонт прогноза, мин′] (* <- lang_ru;; *);;
+
+rrel_mon_module
+<- sc_node_role_relation;
+=> nrel_main_idtf: [модуль в ситуации′] (* <- lang_ru;; *);;
+
+rrel_mon_metric
+<- sc_node_role_relation;
+=> nrel_main_idtf: [показатель ресурса′] (* <- lang_ru;; *);;
+
+rrel_mon_warn
+<- sc_node_role_relation;
+=> nrel_main_idtf: [граница умеренной деградации′] (* <- lang_ru;; *);;
+
+rrel_mon_severe
+<- sc_node_role_relation;
+=> nrel_main_idtf: [граница значительной деградации′] (* <- lang_ru;; *);;
+
+rrel_mon_state_input
+<- sc_node_role_relation;
+=> nrel_main_idtf: [состояние в момент наблюдения′] (* <- lang_ru;; *);;
+
+rrel_mon_procedure_input
+<- sc_node_role_relation;
+=> nrel_main_idtf: [наблюдаемая процедура′] (* <- lang_ru;; *);;
+
+rrel_mon_phase_input
+<- sc_node_role_relation;
+=> nrel_main_idtf: [наблюдаемая фаза′] (* <- lang_ru;; *);;
+
+rrel_mon_exception
+<- sc_node_role_relation;
+=> nrel_main_idtf: [штатное исключение′] (* <- lang_ru;; *);;
+
+rrel_mon_profile
+<- sc_node_role_relation;
+=> nrel_main_idtf: [профиль диагностики′] (* <- lang_ru;; *);;
+
+rrel_mon_rule
+<- sc_node_role_relation;
+=> nrel_main_idtf: [правило классификации′] (* <- lang_ru;; *);;
+
+rrel_mon_condition
+<- sc_node_role_relation;
+=> nrel_main_idtf: [необходимый признак′] (* <- lang_ru;; *);;
+
+rrel_mon_attribute
+<- sc_node_role_relation;
+=> nrel_main_idtf: [проверяемое ролевое отношение′] (* <- lang_ru;; *);;
+
+rrel_mon_expected
+<- sc_node_role_relation;
+=> nrel_main_idtf: [ожидаемое значение′] (* <- lang_ru;; *);;
+
+rrel_mon_min_duration
+<- sc_node_role_relation;
+=> nrel_main_idtf: [минимальная длительность нарушения, мин′] (* <- lang_ru;; *);;
+
+rrel_mon_priority
+<- sc_node_role_relation;
+=> nrel_main_idtf: [приоритет диагноза′] (* <- lang_ru;; *);;
+
+rrel_mon_class
+<- sc_node_role_relation;
+=> nrel_main_idtf: [класс диагностируемой ситуации′] (* <- lang_ru;; *);;
+
+rrel_mon_severity
+<- sc_node_role_relation;
+=> nrel_main_idtf: [критичность по правилу′] (* <- lang_ru;; *);;
+
+rrel_mon_cause
+<- sc_node_role_relation;
+=> nrel_main_idtf: [причина по правилу′] (* <- lang_ru;; *);;
+
+rrel_mon_validation
+<- sc_node_role_relation;
+=> nrel_main_idtf: [статус валидации′] (* <- lang_ru;; *);;
+
+rrel_mon_validation_reason
+<- sc_node_role_relation;
+=> nrel_main_idtf: [причина статуса′] (* <- lang_ru;; *);;
+
+rrel_mon_compliance
+<- sc_node_role_relation;
+=> nrel_main_idtf: [соответствие уставкам′] (* <- lang_ru;; *);;
+
+rrel_mon_violated_limit
+<- sc_node_role_relation;
+=> nrel_main_idtf: [нарушенная уставка′] (* <- lang_ru;; *);;
+
+rrel_mon_duration
+<- sc_node_role_relation;
+=> nrel_main_idtf: [длительность нарушения, мин′] (* <- lang_ru;; *);;
+
+rrel_mon_forecast
+<- sc_node_role_relation;
+=> nrel_main_idtf: [прогноз нарушения′] (* <- lang_ru;; *);;
+
+rrel_mon_eta
+<- sc_node_role_relation;
+=> nrel_main_idtf: [время до нарушения, мин′] (* <- lang_ru;; *);;
+
+rrel_mon_rate
+<- sc_node_role_relation;
+=> nrel_main_idtf: [скорость изменения за минуту′] (* <- lang_ru;; *);;
+
+rrel_mon_degradation
+<- sc_node_role_relation;
+=> nrel_main_idtf: [степень деградации′] (* <- lang_ru;; *);;
+
+rrel_mon_wear_sign
+<- sc_node_role_relation;
+=> nrel_main_idtf: [признак деградации′] (* <- lang_ru;; *);;
+
+rrel_mon_state
+<- sc_node_role_relation;
+=> nrel_main_idtf: [состояние ISA-88′] (* <- lang_ru;; *);;
+
+rrel_mon_procedure
+<- sc_node_role_relation;
+=> nrel_main_idtf: [текущая процедура′] (* <- lang_ru;; *);;
+
+rrel_mon_phase
+<- sc_node_role_relation;
+=> nrel_main_idtf: [текущая фаза′] (* <- lang_ru;; *);;
+
+rrel_mon_active_module
+<- sc_node_role_relation;
+=> nrel_main_idtf: [задействованный модуль′] (* <- lang_ru;; *);;
+
+rrel_mon_context_status
+<- sc_node_role_relation;
+=> nrel_main_idtf: [штатность показаний в контексте′] (* <- lang_ru;; *);;
+
+rrel_mon_justification
+<- sc_node_role_relation;
+=> nrel_main_idtf: [обоснование штатности′] (* <- lang_ru;; *);;
+
+rrel_mon_location
+<- sc_node_role_relation;
+=> nrel_main_idtf: [место ситуации′] (* <- lang_ru;; *);;
+
+rrel_mon_criticality
+<- sc_node_role_relation;
+=> nrel_main_idtf: [критичность′] (* <- lang_ru;; *);;
+
+rrel_mon_likely_cause
+<- sc_node_role_relation;
+=> nrel_main_idtf: [вероятная причина′] (* <- lang_ru;; *);;
+
+rrel_mon_failure_reason
+<- sc_node_role_relation;
+=> nrel_main_idtf: [причина неуспешной классификации′] (* <- lang_ru;; *);;
+
+rrel_mon_parent
+<- sc_node_role_relation;
+=> nrel_main_idtf: [исходная команда анализа′] (* <- lang_ru;; *);;
+
+rrel_mon_parts
+<- sc_node_role_relation;
+=> nrel_main_idtf: [результаты откликнувшихся обработчиков′] (* <- lang_ru;; *);;
+
+mon_unknown
+=> nrel_main_idtf: [не определено] (* <- lang_ru;; *);;
+
+mon_insufficient
+=> nrel_main_idtf: [недостаточность данных] (* <- lang_ru;; *);;
+
+mon_unknown_validity
+=> nrel_main_idtf: [достоверность не определена] (* <- lang_ru;; *);;
+
+mon_reliable
+=> nrel_main_idtf: [достоверные показания] (* <- lang_ru;; *);;
+
+mon_unreliable
+=> nrel_main_idtf: [недостоверные показания] (* <- lang_ru;; *);;
+
+mon_out_of_range
+=> nrel_main_idtf: [выход за физический диапазон] (* <- lang_ru;; *);;
+
+mon_stuck
+=> nrel_main_idtf: [залипание значения] (* <- lang_ru;; *);;
+
+mon_peer_disagreement
+=> nrel_main_idtf: [расхождение с парным прибором] (* <- lang_ru;; *);;
+
+mon_low
+=> nrel_main_idtf: [ниже нижней уставки] (* <- lang_ru;; *);;
+
+mon_high
+=> nrel_main_idtf: [выше верхней уставки] (* <- lang_ru;; *);;
+
+mon_in_range
+=> nrel_main_idtf: [в пределах уставок] (* <- lang_ru;; *);;
+
+mon_forecast_high
+=> nrel_main_idtf: [ожидаемый выход за верхнюю уставку] (* <- lang_ru;; *);;
+
+mon_forecast_low
+=> nrel_main_idtf: [ожидаемый выход за нижнюю уставку] (* <- lang_ru;; *);;
+
+mon_no_forecast
+=> nrel_main_idtf: [нарушение не ожидается] (* <- lang_ru;; *);;
+
+mon_significant
+=> nrel_main_idtf: [значительная деградация] (* <- lang_ru;; *);;
+
+mon_moderate
+=> nrel_main_idtf: [умеренная деградация] (* <- lang_ru;; *);;
+
+mon_no_wear
+=> nrel_main_idtf: [признаков деградации нет] (* <- lang_ru;; *);;
+
+mon_current_growth
+=> nrel_main_idtf: [рост тока] (* <- lang_ru;; *);;
+
+mon_slow_actuation
+=> nrel_main_idtf: [рост времени срабатывания] (* <- lang_ru;; *);;
+
+mon_exhausted_hours
+=> nrel_main_idtf: [выработка ресурса по наработке] (* <- lang_ru;; *);;
+
+mon_exhausted_cycles
+=> nrel_main_idtf: [выработка ресурса по числу циклов] (* <- lang_ru;; *);;
+
+mon_expected_in_state
+=> nrel_main_idtf: [штатно в текущем состоянии] (* <- lang_ru;; *);;
+
+mon_level
+=> nrel_main_idtf: [уровень] (* <- lang_ru;; *);;
+
+mon_temp
+=> nrel_main_idtf: [температура продукта] (* <- lang_ru;; *);;
+
+mon_flow
+=> nrel_main_idtf: [расход продукта] (* <- lang_ru;; *);;
+
+mon_pressure
+=> nrel_main_idtf: [давление продукта] (* <- lang_ru;; *);;
+
+mon_open
+=> nrel_main_idtf: [открытие маршрута] (* <- lang_ru;; *);;
+
+mon_valve_wait
+=> nrel_main_idtf: [время после команды клапану] (* <- lang_ru;; *);;
+
+mon_feedback
+=> nrel_main_idtf: [подтверждение положения клапана] (* <- lang_ru;; *);;
+
+mon_pump
+=> nrel_main_idtf: [насосный модуль] (* <- lang_ru;; *);;
+
+mon_pump_current
+=> nrel_main_idtf: [ток двигателя] (* <- lang_ru;; *);;
+
+mon_phase_time
+=> nrel_main_idtf: [длительность незавершённой фазы] (* <- lang_ru;; *);;
+
+mon_wash_temp
+=> nrel_main_idtf: [температура моющего раствора] (* <- lang_ru;; *);;
+
+mon_concentration
+=> nrel_main_idtf: [концентрация моющего раствора] (* <- lang_ru;; *);;
+
+mon_hours
+=> nrel_main_idtf: [наработка] (* <- lang_ru;; *);;
+
+mon_cycles
+=> nrel_main_idtf: [число циклов] (* <- lang_ru;; *);;
+
+mon_response_time
+=> nrel_main_idtf: [время срабатывания] (* <- lang_ru;; *);;
+
+mon_current
+=> nrel_main_idtf: [потребляемый ток] (* <- lang_ru;; *);;
+
+mon_critical
+=> nrel_main_idtf: [высокая критичность] (* <- lang_ru;; *);;
+
+mon_warning
+=> nrel_main_idtf: [средняя критичность] (* <- lang_ru;; *);;
+
+mon_supply
+=> nrel_main_idtf: [недостаточная подача] (* <- lang_ru;; *);;
+
+mon_inlet
+=> nrel_main_idtf: [избыточный приток] (* <- lang_ru;; *);;
+
+mon_heating
+=> nrel_main_idtf: [нарушение теплового режима] (* <- lang_ru;; *);;
+
+mon_actuator
+=> nrel_main_idtf: [задержка привода клапана] (* <- lang_ru;; *);;
+
+mon_bearing
+=> nrel_main_idtf: [нагрузка или износ насоса] (* <- lang_ru;; *);;
+
+mon_restriction
+=> nrel_main_idtf: [ограничение потока] (* <- lang_ru;; *);;
+
+mon_instrument
+=> nrel_main_idtf: [неисправность измерительного канала] (* <- lang_ru;; *);;
+
+mon_blocked
+=> nrel_main_idtf: [блокирующее условие фазы] (* <- lang_ru;; *);;
+
+mon_wash
+=> nrel_main_idtf: [причина в параметрах моющего раствора] (* <- lang_ru;; *);;
+
+mon_validation_method
+<- sc_node_role_relation;
+=> nrel_main_idtf: [проверка достоверности] (* <- lang_ru;; *);;
+
+mon_threshold_method
+<- sc_node_role_relation;
+=> nrel_main_idtf: [контроль уставок] (* <- lang_ru;; *);;
+
+mon_prediction_method
+<- sc_node_role_relation;
+=> nrel_main_idtf: [анализ тренда] (* <- lang_ru;; *);;
+
+mon_wear_method
+<- sc_node_role_relation;
+=> nrel_main_idtf: [анализ износа] (* <- lang_ru;; *);;
+
+mon_context_method
+<- sc_node_role_relation;
+=> nrel_main_idtf: [анализ контекста ISA-88] (* <- lang_ru;; *);;
+
+action_mon_assess_object
+<- sc_node_class;
+=> nrel_main_idtf: [оценить состояние объекта] (* <- lang_ru;; *);
+<= nrel_inclusion: information_action;;
+
+action_mon_classify_object
+<- sc_node_class;
+=> nrel_main_idtf: [классифицировать ситуацию объекта] (* <- lang_ru;; *);
+<= nrel_inclusion: information_action;;
+
+action_mon_analyze_situation
+<- sc_node_class;
+=> nrel_main_idtf: [получить классификацию по текущим измерениям] (* <- lang_ru;; *);
+<= nrel_inclusion: information_action;;
+
+action_mon_collect_result
+<- sc_node_class;
+=> nrel_main_idtf: [получить результат подзадачи анализа] (* <- lang_ru;; *);
+<= nrel_inclusion: information_action;;
+
+mon_context_sensitive
+<- sc_node_class;
+=> nrel_main_idtf: [признак с поправкой на процессный контекст] (* <- lang_ru;; *);;
+
+mon_normal_situation
+<- sc_node_class;
+=> nrel_main_idtf: [штатная ситуация] (* <- lang_ru;; *);;
+
+mon_idle
+=> nrel_main_idtf: [Ожидание (Idle)] (* <- lang_ru;; *);;
+
+mon_any_sensor
+=> nrel_main_idtf: [любой измерительный канал объекта] (* <- lang_ru;; *);;
+
+rrel_mon_duration_upper
+<- sc_node_role_relation;
+=> nrel_main_idtf: [верхняя граница длительности нарушения, мин′] (* <- lang_ru;; *);;
+
+rrel_mon_evidence
+<- sc_node_role_relation;
+=> nrel_main_idtf: [собранные оценки ситуации′] (* <- lang_ru;; *);;
