@@ -1,0 +1,39 @@
+action_get_definition
+<- sc_node_class;
+=> nrel_main_idtf: [действие получения определения понятия] (* <- lang_ru;; *);
+=> nrel_idtf: [вопрос «что такое понятие»] (* <- lang_ru;; *);
+<= nrel_inclusion: information_action;;
+
+action_get_classification
+<- sc_node_class;
+=> nrel_main_idtf: [действие получения видов понятия] (* <- lang_ru;; *);
+=> nrel_idtf: [вопрос «какие бывают виды понятия»] (* <- lang_ru;; *);
+<= nrel_inclusion: information_action;;
+
+action_explain_relation
+<- sc_node_class;
+=> nrel_main_idtf: [действие объяснения связи понятий] (* <- lang_ru;; *);
+=> nrel_idtf: [вопрос «как связаны понятия»] (* <- lang_ru;; *);
+<= nrel_inclusion: information_action;;
+
+rrel_path_begin <- sc_node_role_relation;
+=> nrel_main_idtf: [начало пути'] (* <- lang_ru;; *);;
+rrel_path_end <- sc_node_role_relation;
+=> nrel_main_idtf: [конец пути'] (* <- lang_ru;; *);;
+
+action_search_concepts
+<- sc_node_class;
+=> nrel_main_idtf: [действие поиска понятий по запросу] (* <- lang_ru;; *);
+=> nrel_idtf: [вопрос «что соответствует запросу»] (* <- lang_ru;; *);
+<= nrel_inclusion: information_action;;
+
+rrel_match_reason
+<- sc_node_role_relation;
+=> nrel_main_idtf: [основание совпадения'] (* <- lang_ru;; *);
+=> nrel_idtf: [основание совпадения запроса с понятием'] (* <- lang_ru;; *);;
+
+concept_search_query
+<- sc_node_class;
+=> nrel_main_idtf: [запрос на поиск понятий] (* <- lang_ru;; *);
+=> nrel_main_idtf: [concept search query] (* <- lang_en;; *);;
+

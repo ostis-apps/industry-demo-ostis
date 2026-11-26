@@ -1,0 +1,60 @@
+ui_menu_get_definition 
+<- ui_user_command_class_atom; 
+<- ui_user_command_class_view_kb; 
+<- ui_one_argument_command_class;
+=> nrel_main_idtf: 
+[Что такое указанное понятие?] (* <- lang_ru;; *);
+=> ui_nrel_command_template:
+[*
+    action_get_definition _-> ._action_get_definition_instance
+        (* _-> rrel_1:: ui_arg_1;; *);;
+    ._action_get_definition_instance <-_ action;;
+*];
+=> ui_nrel_command_lang_template: [Что это такое: $ui_arg_1] (* <- lang_ru;; *);;
+
+ui_menu_get_classification 
+<- ui_user_command_class_atom; 
+<- ui_user_command_class_view_kb; 
+<- ui_one_argument_command_class;
+=> nrel_main_idtf: 
+[Какие бывают виды указанного понятия?] (* <- lang_ru;; *);
+=> ui_nrel_command_template:
+[*
+    action_get_classification _-> ._action_get_classification_instance
+        (* _-> rrel_1:: ui_arg_1;; *);;
+    ._action_get_classification_instance <-_ action;;
+*];
+=> ui_nrel_command_lang_template: [Какие бывают $ui_arg_1] (* <- lang_ru;; *);;
+
+ui_menu_explain_relation 
+<- ui_user_command_class_atom; 
+<- ui_user_command_class_view_kb; 
+<- ui_two_argument_command_class;
+=> nrel_main_idtf: 
+	[Как связаны указанные понятия?] (* <- lang_ru;; *);
+=> ui_nrel_command_template:
+	[*
+		action_explain_relation _-> ._action_explain_relation_instance
+			(*
+				_-> rrel_1:: ui_arg_1;;
+				_-> rrel_2:: ui_arg_2;;
+			*);;
+		._action_explain_relation_instance <-_ action;;
+	*];
+=> ui_nrel_command_lang_template: [Как связаны $ui_arg_1 и $ui_arg_2] (* <- lang_ru;; *);;
+
+ui_menu_search_concepts 
+<- ui_user_command_class_atom; 
+<- ui_user_command_class_view_kb; 
+<- ui_one_argument_command_class;
+=> nrel_main_idtf: 
+	[Что соответствует запросу?] (* <- lang_ru;; *);
+=> ui_nrel_command_template:
+	[*
+		action_search_concepts _-> ._action_search_concepts_instance
+			(*
+				_-> rrel_1:: ui_arg_1;;
+			*);;
+		._action_search_concepts_instance <-_ action;;
+	*];
+=> ui_nrel_command_lang_template: [Что соответствует $ui_arg_1] (* <- lang_ru;; *);;
